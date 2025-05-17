@@ -16,8 +16,7 @@ I developed a small, highly optimized library of computer vision functions inclu
 
 The work demonstrated that meaningful image processing pipelines could run in real time on low-power embedded systems.
 
-👉 [View the connected component labelling code](source/cv_library.s)
-
+👉 [Source Code](source/cv_library.asm)
 
 ![VideoCore VC02](images/Videocore.png)
 
