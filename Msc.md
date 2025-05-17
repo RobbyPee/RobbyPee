@@ -28,7 +28,8 @@ The algorithm used a novel approach that scanned across the image in a raster pa
 
 Here's a static explanation showing how the labels are resolved through repeated raster-style passes in each direction:
 
-![Connected Component Labelling](images\connectedComponentLabelling.png)
+![Connected Component Labelling](images/connectedComponentLabelling.png)
+
 
 The approach avoids the need for a union-find structure by propagating the minimum label across connected pixels — compact, efficient, and perfect for SIMD.
 
