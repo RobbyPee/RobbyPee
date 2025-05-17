@@ -7,7 +7,9 @@ This project explored whether core computer vision algorithms could run efficien
 
 I researched academic papers, selected a set of classic vision techniques, and reimplemented them entirely in vector assembler to make use of the SIMD instruction set, achieving up to 50× performance gains compared to equivalent C code running on the main processor. 
 
-Nowadays, SIMD operations are often wrapped in libraries or frameworks like CUDA, OpenCL, Intel Intrinsics, or ARM NEON, where you get structured access to parallelism. But back then, I had to do it all directly in vector assembler, writing explicit instructions to load data, operate in parallel across lanes, and extract results manually. The overall pattern was familiar: *load → compute → store* but at the lowest level.
+These days, SIMD is usually wrapped in higher-level tools like CUDA, OpenCL, or processor-specific intrinsics like Intel AVX or ARM NEON. But at the time, I was working on a specialised ARM-based DSP that didn’t support any of those, so I had to write everything directly in vector assembler. 
+
+The structure was still familiar: *load → compute → store* , but all manually. No abstractions. Just registers, instruction latency, and lots of cycle counting.
 
 ![SIMD architecture](images/SIMD.png)
 
