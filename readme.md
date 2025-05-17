@@ -20,7 +20,7 @@ This page showcases a selection of my work, some completed, some ongoing, and so
 
 Links
 - [Real-Time Embedded Computer Vision Msc](Msc.md)
-- [Playable version of Computer Vision Pong (enable your webcam!)](source/HandPong.html)
+- [Playable version of Computer Vision Pong (enable your webcam!)]([source/HandPong.html](https://robbypee.github.io/HandPong/)) - you'll need to enable camera, and possibly disable adblocker!
 - [Patent explainer](Tow_Hitch_Position_Estimation_SfM.md)
 
 ## Philosophy
