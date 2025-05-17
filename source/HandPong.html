@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hand Pong</title>
+  <style>
+    body { margin: 0; background: black; }
+    canvas { display: block; margin: auto; background: black; }
+    select { position: absolute; top: 10px; left: 10px; z-index: 10; }
+  </style>
+</head>
+<body>
+  <select id="cameraSelect"></select>
+  <canvas id="pong" width="640" height="480"></canvas>
+  <video id="input_video" style="display:none;" autoplay playsinline></video>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>
+
+  <script>
+    const canvas = document.getElementById('pong');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+
+    const video = document.getElementById('input_video');
+    const cameraSelect = document.getElementById('cameraSelect');
+
+    let paddle1Y = H / 2;
+    let paddle2Y = H / 2;
+    const paddleHeight = 100;
+    let ball = { x: W / 2, y: H / 2, vx: 4, vy: 3 };
+let prevBallX = ball.x;
+let score = 0;
+let highScore = 0;
+let countdown = 0;
+let lastHitSide = null;
+let finalScore = 0;
+
+    let currentStream;
+    let animationId;
+
+    const hands = new Hands({
+      locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
+    });
+
+    hands.setOptions({
+      maxNumHands: 2,
+      modelComplexity: 1,
+      minDetectionConfidence: 0.7,
+      minTrackingConfidence: 0.7
+    });
+
+    hands.onResults(results => {
+      ctx.save();
+      ctx.clearRect(0, 0, W, H);
+      // Visualize hand tracking play area
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+      ctx.fillRect(0, 0, W, 30);
+      ctx.fillRect(0, H - 30, W, 30);
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(0, 30);
+      ctx.lineTo(W, 30);
+      ctx.moveTo(0, H - 30);
+      ctx.lineTo(W, H - 30);
+      ctx.stroke();
+      ctx.translate(W, 0);
+      ctx.scale(-1, 1);
+      ctx.drawImage(results.image, 0, 0, W, H);
+      ctx.restore();
+
+      if (results.multiHandLandmarks && results.multiHandedness) {
+        for (let i = 0; i < results.multiHandLandmarks.length; i++) {
+          const hand = results.multiHandLandmarks[i];
+          const label = results.multiHandedness[i].label;
+          const yValues = hand.map(pt => pt.y * H);
+          const avgY = yValues.reduce((a, b) => a + b, 0) / yValues.length;
+          const margin = 30;
+          const clampedY = Math.max(margin + paddleHeight / 2, Math.min(H - margin - paddleHeight / 2, avgY));
+
+          if (label === 'Left') paddle2Y = clampedY;
+          else if (label === 'Right') paddle1Y = clampedY;
+
+          ctx.save();
+          ctx.translate(W, 0);
+          ctx.scale(-1, 1);
+          window.drawConnectors(ctx, hand, window.HAND_CONNECTIONS, { color: '#0f0' });
+          window.drawLandmarks(ctx, hand, { color: '#ff0', radius: 4 });
+          ctx.restore();
+        }
+      }
+
+      // Display text and paddles
+      ctx.fillStyle = 'green';
+      ctx.fillRect(10, paddle1Y - paddleHeight / 2, 10, paddleHeight);
+      ctx.fillRect(W - 20, paddle2Y - paddleHeight / 2, 10, paddleHeight);
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, 10, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Display score and labels
+      ctx.fillStyle = 'white';
+      ctx.font = '20px sans-serif';
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 4;
+      ctx.strokeText('Hand Pong', W / 2 - 60, 25);
+      ctx.fillText('Hand Pong', W / 2 - 60, 25);
+      ctx.fillText('by Robin Plowman', W / 2 - 90, H - 10);
+      ctx.fillText(`Score: ${score}`, 10, 25);
+      ctx.fillText(`High Score: ${highScore}`, W - 160, 25);
+
+      // Show countdown or game over if active
+      if (countdown > 0) {
+        ctx.fillStyle = 'red';
+        ctx.font = '40px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(`Game Over! Score ${finalScore}`, W / 2, H / 2 - 40);
+        ctx.font = '30px sans-serif';
+        ctx.fillText(`Restarting in... ${countdown}`, W / 2, H / 2 + 20);
+        ctx.textAlign = 'start';
+        return;
+      }
+
+      // Move ball and check collisions
+      prevBallX = ball.x;
+      ball.x += ball.vx;
+      if ((ball.vx > 0 && prevBallX < ball.x) || (ball.vx < 0 && prevBallX > ball.x)) {
+        lastHitSide = null;
+      }
+      ball.y += ball.vy;
+
+      const margin = 30;
+      if (ball.y < margin || ball.y > H - margin) ball.vy *= -1;
+      if (ball.x - 10 < 20 && prevBallX >= 30 && ball.y > paddle1Y - paddleHeight / 2 && ball.y < paddle1Y + paddleHeight / 2) {
+        ball.vx *= -1;
+        lastHitSide = 'left';
+        score++;
+        if (score > highScore) highScore = score;
+      }
+      if (ball.x + 10 > W - 20 && prevBallX <= W - 30 && ball.y > paddle2Y - paddleHeight / 2 && ball.y < paddle2Y + paddleHeight / 2) {
+        ball.vx *= -1;
+        lastHitSide = 'right';
+        score++;
+        if (score > highScore) highScore = score;
+      }
+      if ((ball.x < 0 || ball.x > W) && countdown === 0) {
+        countdown = 3;
+        // score is cleared after showing it during countdown
+        finalScore = score;
+        score = 0;
+        let countdownInterval = setInterval(() => {
+          countdown--;
+          if (countdown === 0) {
+            ball = {
+              x: W / 2,
+              y: H / 2,
+              vx: (Math.random() > 0.5 ? 4 : -4),
+              vy: 3
+            };
+            clearInterval(countdownInterval);
+          }
+        }, 1000);
+      }
+    });
+
+    async function processFrame() {
+      await hands.send({ image: video });
+  animationId = requestAnimationFrame(processFrame);
+    }
+
+    function startCamera(deviceId) {
+      if (currentStream) {
+        currentStream.getTracks().forEach(track => track.stop());
+      }
+      if (animationId) cancelAnimationFrame(animationId);
+
+      navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: deviceId } } })
+        .then(stream => {
+          video.srcObject = stream;
+          currentStream = stream;
+          video.onloadeddata = () => {
+            processFrame();
+          };
+        })
+        .catch(err => {
+          console.error('Camera error:', err);
+        });
+    }
+
+    function populateCameraList() {
+      navigator.mediaDevices.enumerateDevices().then(devices => {
+        const videoDevices = devices.filter(d => d.kind === 'videoinput');
+        cameraSelect.innerHTML = '';
+        videoDevices.forEach((device, index) => {
+          const option = document.createElement('option');
+          option.value = device.deviceId;
+          option.text = device.label || `Camera ${index + 1}`;
+          cameraSelect.appendChild(option);
+        });
+        if (videoDevices.length > 0) {
+          startCamera(videoDevices[0].deviceId);
+        }
+      });
+    }
+
+    cameraSelect.addEventListener('change', (e) => {
+      startCamera(e.target.value);
+    });
+
+    populateCameraList();
+  </script>
+</body>
+</html>
