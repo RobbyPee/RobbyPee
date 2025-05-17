@@ -18,7 +18,7 @@ The work demonstrated that meaningful image processing pipelines could run in re
 
 👉 [Source Code](source/cv_library.asm)
 
-![VideoCore VC02](images/Videocore.png)
+![VideoCore VC02](images/VIdeocore.png)
 
 ## Connected Component Labelling (CCL)
 
