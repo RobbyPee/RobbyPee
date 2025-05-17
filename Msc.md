@@ -5,7 +5,11 @@
 ## Summary 
 This project explored whether core computer vision algorithms could run efficiently on a very low-power embedded DSP — specifically the Broadcom VideoCore, which was used in devices like the iPod Video.
 
-I researched academic papers, selected a set of classic vision techniques, and reimplemented them entirely in vector assembler to make use of the SIMD instruction set, achieving up to 50× performance gains compared to equivalent C code running on the main processor.
+I researched academic papers, selected a set of classic vision techniques, and reimplemented them entirely in vector assembler to make use of the SIMD instruction set, achieving up to 50× performance gains compared to equivalent C code running on the main processor. 
+
+Nowadays, SIMD operations are often wrapped in libraries or frameworks like CUDA, OpenCL, Intel Intrinsics, or ARM NEON, where you get structured access to parallelism. But back then, I had to do it all directly in vector assembler, writing explicit instructions to load data, operate in parallel across lanes, and extract results manually. The overall pattern was familiar: *load → compute → store* but at the lowest level.
+
+![SIMD architecture](images/SIMD.png)
 
 I developed a small, highly optimized library of computer vision functions including:
 
