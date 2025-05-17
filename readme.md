@@ -4,7 +4,7 @@
 
 I started out writing games and tools like a scientific calculator as a teenager, then went on to study Mathematics at the University of Warwick. That grounding in logic, structure, and problem-solving continues to shape how I approach everything from embedded systems to AI-powered simulations.
 
-I'm a technical generalist with a strong track record of solving real-world problems — from embedded firmware and multi-threaded C++ systems to data-driven analysis of complex system failures. My background spans computer vision, 3D geometry, classical mathematics, and more recently, LLMs and agent-based architectures. I’ve worked across R&D and production in domains like ADAS, education tooling, and patent strategy — always aiming to build systems that are both useful and original.
+I'm a technical generalist with a strong track record of solving real-world problems, from embedded firmware and multi-threaded C++ systems to data-driven analysis of complex system failures. My background spans computer vision, 3D geometry, classical mathematics, and more recently, LLMs and agent-based architectures. I’ve worked across R&D and production in domains like ADAS, education tooling, and patent strategy, always aiming to build systems that are both useful and original.
 
 
 <div style="display: flex; align-items: flex-start;">
@@ -16,21 +16,21 @@ I'm a technical generalist with a strong track record of solving real-world prob
   <img src="images/alert_graph_red_green.png" alt="True Alerts (True Positives) vs False Alarms (False Positives)" style="width: 350px; border: 1px solid #ccc;" />
 </div>
 
-This page showcases a selection of my work — some completed, some ongoing, and some still taking shape. From embedded trailer assist systems to live LEGO-to-game reconstruction and interpretable agent-based LLM societies.
+This page showcases a selection of my work, some completed, some ongoing, and some still taking shape. From embedded trailer assist systems to live LEGO-to-game reconstruction and interpretable agent-based LLM societies.
 
 Links
-- [Msc](Msc.md)
-- [Playable version of Computer Vision Pong (enable your webcam!)](HandPong.html)
+- [Real-Time Embedded Computer Vision Msc](Msc.md)
+- [Playable version of Computer Vision Pong (enable your webcam!)](source/HandPong.html)
 - [Patent explainer](Tow_Hitch_Position_Estimation_SfM.md)
 
 ## Philosophy
 
 I try to build tools that are:
 
-* **Local-first** – They run on your machine, not someone else's server
-* **Subscription-free** – No recurring fees, no account needed
-* **Open-source** – Inspect, learn from, and modify the code
-* **Owned by the user** – Data stays private, workflows stay portable
+* **Local-first** : They run on your machine, not someone else's server
+* **Subscription-free** : No recurring fees, no account needed
+* **Open-source** : Inspect, learn from, and modify the code
+* **Owned by the user** : Data stays private, workflows stay portable
 
 This matters especially for schools, small businesses, or families who need reliable software without signing up to the expensive subscriptions. It also solves problems with data ownership, like GDPR.
 
@@ -41,7 +41,7 @@ Whenever possible, I use lightweight models like Phi-3 or MediaPipe, served loca
 *Exploring real-world use cases amid the AI hype.*
 
 
-### Local LLM Assistant for my partners business (Lingotots West Hove)
+### Local LLM Assistant for my partners business (Lingotots)
 - LLM-powered (Phi-3) local tool that saves hours of admin time
 - Interfaces with existing tech (Google Business Suite in this case). Accesses calendars, club rosters, school websites and uses RAG to present a summary of emails. 
 - Lists of emails recieved with suggested replies
@@ -113,8 +113,3 @@ Answer - break the problem down, repeatedly. One LLM per class with clear interf
 * **US 10,832,428 B2** – *Range Estimation of Moving Object*
 * **US 12,227,042 B2** – *Calculating Vehicle Trailer Angle*
 
-> *Tow Hitch Estimation* works by identifying trailer features and solving for their pose using structure-from-motion. It's designed for real-time operation and was developed, tested, and embedded in production automotive hardware.
-
----
-
-> If you're building something clever, useful, or weird — get in touch.
