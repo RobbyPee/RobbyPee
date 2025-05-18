@@ -56,14 +56,14 @@ I try to build tools that are local, open source and owned by the user.
 
 This matters especially for schools, small businesses, or families who need reliable software without signing up to the expensive subscriptions. It also solves problems with data ownership, like GDPR.
 
-Whenever possible, I use lightweight models like Phi-3 or MediaPipe, served locally with no tracking or external dependencies.
-
 ## Projects (Ongoing)
 Solving real problems with local AI, modular tools, and a bit of plumbing.
 
 ### Local LLM Assistant for a Small Business
-A fully local, Phi-3-powered tool that processes Gmail threads, reads calendars and club rosters, and drafts admin replies, saving hours each week for my partner’s education franchise.
-**Subscription free, GDPR compliant, secure and resistant to prompt injection**
+Local Phi-3-powered tool that processes Gmail threads, reads calendars and club rosters, drafts admin replies, creates attendance registers, saving hours each week for my partner’s education franchise.
+- **Subscription free, GDPR compliant, secure and resistant to prompt injection**
+- small prototype to test connection to google suite... [Spelling Extractor project](https://github.com/RobbyPee/spelling-extractor)
+
 
 ### LEGO CV + Game Engine
 *top secret for now!* using 3D reconstruction, SFM, reprojection, optimisation. Exploring IP and patentability.
@@ -72,7 +72,8 @@ A fully local, Phi-3-powered tool that processes Gmail threads, reads calendars 
 A sandbox for simulating multi-agent language drift, memory, and role specialisation, inspired by human cultural evolution after visiting https://en.grottechauvet2ardeche.com/. Built for interpretability and social emergence.
 
 ### Meeseeks: Distributed Code Generation
-Each class gets its own LLM agent. They write, test, and document themselves, growing a modular software graph over time. Local abd scalable. (title is Rick and Morty reference)
+Each class gets its own LLM agent. They write, test, and document themselves, growing a modular software graph over time. Local and scalable by creating layers of abstraction (title is Rick and Morty reference). 
+Trying to get LLMs to operate like software engineers
 
 ### DIY
 I moved and rebuilt our bathroom from scratch. Only leaked once whilst plumbing! Still tiling...
