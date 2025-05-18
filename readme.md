@@ -62,7 +62,8 @@ Whenever possible, I use lightweight models like Phi-3 or MediaPipe, served loca
 Solving real problems with local AI, modular tools, and a bit of plumbing.
 
 ### Local LLM Assistant for a Small Business
-A fully local, Phi-3-powered tool that processes Gmail threads, reads calendars and club rosters, and drafts admin replies — saving hours each week for my partner’s education franchise.
+A fully local, Phi-3-powered tool that processes Gmail threads, reads calendars and club rosters, and drafts admin replies, saving hours each week for my partner’s education franchise.
+**Subscription free, GDPR compliant, secure and resistant to prompt injection**
 
 ### LEGO CV + Game Engine
 *top secret for now!* using 3D reconstruction, SFM, reprojection, optimisation. Exploring IP and patentability.
