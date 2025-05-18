@@ -59,21 +59,21 @@ This matters especially for schools, small businesses, or families who need reli
 ## Projects (Ongoing)
 Solving real problems with local AI, modular tools, and a bit of plumbing.
 
+### Recursia: Distributed Code Generation
+[Recursia](https://github.com/RobbyPee/Recursia/)
+Each class gets its own LLM agent. They write, test, and document themselves, growing a modular software graph over time. Local and scalable by creating layers of abstraction (title is Rick and Morty reference). 
+Trying to get LLMs to operate like software engineers. 
+
 ### Local LLM Assistant for a Small Business
 Local Phi-3-powered tool that processes Gmail threads, reads calendars and club rosters, drafts admin replies, creates attendance registers, saving hours each week for my partner’s education franchise.
 - **Subscription free, GDPR compliant, secure and resistant to prompt injection**
 - small prototype to test connection to google suite... [Spelling Extractor project](https://github.com/RobbyPee/spelling-extractor)
-
 
 ### LEGO CV + Game Engine
 *top secret for now!* using 3D reconstruction, SFM, reprojection, optimisation. Exploring IP and patentability.
 
 ### Cultural Evolution in LLM Societies
 A sandbox for simulating multi-agent language drift, memory, and role specialisation, inspired by human cultural evolution after visiting https://en.grottechauvet2ardeche.com/. Built for interpretability and social emergence.
-
-### Meeseeks: Distributed Code Generation
-Each class gets its own LLM agent. They write, test, and document themselves, growing a modular software graph over time. Local and scalable by creating layers of abstraction (title is Rick and Morty reference). 
-Trying to get LLMs to operate like software engineers
 
 ### DIY
 I moved and rebuilt our bathroom. Only leaked once whilst plumbing! Still tiling...
