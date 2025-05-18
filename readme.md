@@ -1,21 +1,22 @@
 # Robin Plowman
 
-*Developer · R\&D Engineer · Data Explorer · Visual Thinker*
+**R&D Engineer – AI, Vision & Systems**
 
 I design and build systems that work using mathematics, computer vision, and AI tools to turn complex problems into practical solutions.
 
-I have a BSc in Mathematics from  Warwick and an MSc in Computer Vision from York. That foundation in logic, structure, and perception drives how I approach complex systems, from embedded DSPs and C++ pipelines to AI-powered simulations and agent-based architectures.
+I have a BSc in Mathematics from Warwick and an MSc in Computer Vision from York. That foundation in logic, structure, and perception drives how I approach complex systems, from embedded DSPs and C++ pipelines to AI-powered simulations and agent-based architectures.
 
-My background spans embedded systems, multi-threaded large scale C++, 3D geometry, classical computer vision, data analysis, and increasingly, LLMs and autonomous agents. I’ve worked across R&D and production in domains like ADAS, education tech, and patent strategy, always aiming to create systems that are both useful and original.
+My background spans embedded systems, multi-threaded large-scale C++, 3D geometry, classical computer vision, data analysis, and increasingly, LLMs and autonomous agents. I’ve worked across R&D and production in domains including ADAS, defence, finance, and education tech.
 
-*Data visualisation* is central to my workflow not just for presenting results, but as a necessary tool for diagnosing, explaining, and improving large-scale systems. It’s especially vital in computer vision, where real-world complexity demands constant interpretation and iteration.
+I find data visualisation central to my workflow, not just for presenting results, but for diagnosing, explaining, and improving large-scale, data-heavy systems.
 
 This GitHub is where I prototype and experiment. Much of the code is LLM-assisted, but the architecture, refinement, and insights are mine.
 
 Links
 - [Real-Time Embedded Computer Vision Msc](Msc.md)
-- [Playable version of Computer Vision Pong (enable your webcam!)](https://robbypee.github.io/HandPong/) - you'll need to enable camera, and possibly disable adblocker!
 - [Patent explainer](Tow_Hitch_Position_Estimation_SfM.md)
+
+- Just for fun, a [playable version of Computer Vision Pong I recreated from my MSc prototype](https://robbypee.github.io/HandPong/) - you'll need to enable camera, and possibly disable adblocker!
 
 
 ## Skills
