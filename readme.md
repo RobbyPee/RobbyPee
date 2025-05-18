@@ -2,82 +2,21 @@
 
 *Developer · R\&D Engineer · Data Explorer · Visual Thinker*
 
-I started out writing games and tools like a scientific calculator as a teenager, then went on to study Mathematics at the University of Warwick. That grounding in logic, structure, and problem-solving continues to shape how I approach everything from embedded systems to AI-powered simulations.
+I design and build systems that work using mathematics, computer vision, and AI tools to turn complex problems into practical solutions.
 
-I'm a technical generalist with a strong track record of solving real-world problems, from embedded firmware and multi-threaded C++ systems to data-driven analysis of complex system failures. My background spans computer vision, 3D geometry, classical mathematics, and more recently, LLMs and agent-based architectures. I’ve worked across R&D and production in domains like ADAS, education tooling, and patent strategy, always aiming to build systems that are both useful and original.
+I have a BSc in Mathematics from  Warwick and an MSc in Computer Vision from York. That foundation in logic, structure, and perception drives how I approach complex systems, from embedded DSPs and C++ pipelines to AI-powered simulations and agent-based architectures.
 
+My background spans embedded systems, multi-threaded large scale C++, 3D geometry, classical computer vision, data analysis, and increasingly, LLMs and autonomous agents. I’ve worked across R&D and production in domains like ADAS, education tech, and patent strategy, always aiming to create systems that are both useful and original.
 
-<div style="display: flex; align-items: flex-start;">
-  <div style="flex: 1; padding-right: 20px;">
-  <p></p>
-    <p>I love to build visual tools to explain and debug: animated plots, overlaid video, interactive simulations, and even dynamic Excel sheets. Good visuals don't just communicate, they hook people in, create alignment, and make technical work human.</p>
-    <p>My goal is usually to make people ask <i>What if ....?</i></p>
-  </div>
-  <img src="images/alert_graph_red_green.png" alt="True Alerts (True Positives) vs False Alarms (False Positives)" style="width: 350px; border: 1px solid #ccc;" />
-</div>
+*Data visualisation* is central to my workflow not just for presenting results, but as a necessary tool for diagnosing, explaining, and improving large-scale systems. It’s especially vital in computer vision, where real-world complexity demands constant interpretation and iteration.
 
-This page showcases a selection of my work, some completed, some ongoing, and some still taking shape. From embedded trailer assist systems to live LEGO-to-game reconstruction and interpretable agent-based LLM societies.
+This GitHub is where I prototype and experiment. Much of the code is LLM-assisted, but the architecture, refinement, and insights are mine.
 
 Links
 - [Real-Time Embedded Computer Vision Msc](Msc.md)
 - [Playable version of Computer Vision Pong (enable your webcam!)](https://robbypee.github.io/HandPong/) - you'll need to enable camera, and possibly disable adblocker!
 - [Patent explainer](Tow_Hitch_Position_Estimation_SfM.md)
 
-## Philosophy
-
-I try to build tools that are:
-
-* **Local-first** : They run on your machine, not someone else's server
-* **Subscription-free** : No recurring fees, no account needed
-* **Open-source** : Inspect, learn from, and modify the code
-* **Owned by the user** : Data stays private, workflows stay portable
-
-This matters especially for schools, small businesses, or families who need reliable software without signing up to the expensive subscriptions. It also solves problems with data ownership, like GDPR.
-
-Whenever possible, I use lightweight models like Phi-3 or MediaPipe, served locally with no tracking or external dependencies.
-
-## Projects (Ongoing)
-
-*Exploring real-world use cases amid the AI hype.*
-
-
-### Local LLM Assistant for my partners business (Lingotots)
-- LLM-powered (Phi-3) local tool that saves hours of admin time
-- Interfaces with existing tech (Google Business Suite in this case). Accesses calendars, club rosters, school websites and uses RAG to present a summary of emails. 
-- Lists of emails recieved with suggested replies
-- Producing attedance sheet with lists of pick up times
-- Demo includes human-in-the-loop interface, brand-consistent auto-replies, and modular Google Apps Script integration
-
-GDPR compliant and reistant to prompt injection. 
-Runs entirely locally on a laptop in the office.
-
-### LEGO CV + Game Engine
-- Top Secret for now, I need to explore IP protection!
-
-### LLM evolution
-
-Inspired by human cultural evolution and cognitive specialization. Does cooperation between specialised agents lead to a Theory of Mind? What emergent behaviours appear?
-
-- A simulated society of LLM agents evolving language, roles, and memory
-- Built for interpretability, with a dedicated “interpreter agent” preserving human readability
-- Goal: Explore emergence of social structure, language drift, and role-based proto-cultures
-
-### Large Scale Software Development with Local LLMs
-How can we solve the problem of llms developing large software codebases with limited context sizes?
-
-Answer - break the problem down, repeatedly. One LLM per class with clear interfaces. Parallelizable and scalable.
-
-- Autonomous agent network where each agent represents a code class
-- Agents handle test writing, implementation, documentation, and prompt self-updating
-- Periodic summarization reduces context window usage and improves abstraction
-- Graph grows over time with agent spawns for subclasses and merges
-- Early target: solving TSP or simulation problems with 3–5 class hierarchies
-
-
-### Numerous DIY projects too!
-- must finish tiling the bathroom...
-
----
 
 ## Skills
 
@@ -85,8 +24,6 @@ Answer - break the problem down, repeatedly. One LLM per class with clear interf
 * **Domains**: Computer Vision, 3D Geometry Embedded Systems, Real-Time Control, Optimisation, SLAM/SfM, Neural Networks, Patent Analysis
 * **Tools**: Git, Azure DevOps, CI/CD, Qt, ZeroMQ, TensorFlow, ONNX, Intel TBB
 * **Concepts**: Structure from Motion, Kalman Filtering, 3D Geometry, Control Theory, Statistical Analysis, CI/Test Automation
-
----
 
 ## Work History
 
@@ -98,7 +35,6 @@ Answer - break the problem down, repeatedly. One LLM per class with clear interf
 * **Patent Attorney (Venner Shipley)** – Drafted and prosecuted electronics patents for global clients.
 * **Fidessa / Edwards / OCCAM** – Various C++ infrastructure and modelling roles in finance and motor control.
 
----
 
 ## Education
 
@@ -113,3 +49,28 @@ Answer - break the problem down, repeatedly. One LLM per class with clear interf
 * **US 10,832,428 B2** – *Range Estimation of Moving Object*
 * **US 12,227,042 B2** – *Calculating Vehicle Trailer Angle*
 
+## Philosophy
+
+I try to build tools that are local, open source and owned by the user. 
+
+This matters especially for schools, small businesses, or families who need reliable software without signing up to the expensive subscriptions. It also solves problems with data ownership, like GDPR.
+
+Whenever possible, I use lightweight models like Phi-3 or MediaPipe, served locally with no tracking or external dependencies.
+
+## Projects (Ongoing)
+Solving real problems with local AI, modular tools, and a bit of plumbing.
+
+### Local LLM Assistant for a Small Business
+A fully local, Phi-3-powered tool that processes Gmail threads, reads calendars and club rosters, and drafts admin replies — saving hours each week for my partner’s education franchise.
+
+### LEGO CV + Game Engine
+*top secret for now!* using 3D reconstruction, SFM, reprojection, optimisation. Exploring IP and patentability.
+
+### Cultural Evolution in LLM Societies
+A sandbox for simulating multi-agent language drift, memory, and role specialisation, inspired by human cultural evolution after visiting https://en.grottechauvet2ardeche.com/. Built for interpretability and social emergence.
+
+### Meeseeks: Distributed Code Generation
+Each class gets its own LLM agent. They write, test, and document themselves, growing a modular software graph over time. Local abd scalable. (title is Rick and Morty reference)
+
+### DIY
+I moved and rebuilt our bathroom from scratch. Only leaked once whilst plumbing! Still tiling...
