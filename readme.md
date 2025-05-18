@@ -76,4 +76,9 @@ Each class gets its own LLM agent. They write, test, and document themselves, gr
 Trying to get LLMs to operate like software engineers
 
 ### DIY
-I moved and rebuilt our bathroom from scratch. Only leaked once whilst plumbing! Still tiling...
+I moved and rebuilt our bathroom. Only leaked once whilst plumbing! Still tiling...
+<p align="center">
+  <img src="images/plumbin1.jpg" width="400">
+  <br>
+  <em>Routing all this was surprisingly hard - inspired by Microsoft Pipes screensaver :)</em>
+</p>
