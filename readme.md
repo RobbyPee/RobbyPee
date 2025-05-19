@@ -82,7 +82,3 @@ I moved and rebuilt our bathroom. Only leaked once whilst plumbing! Still tiling
   <br>
   <em>Routing all this was surprisingly hard - inspired by Microsoft Pipes screensaver :)</em>
 </p>
-
-![pipes](images/pipes.gif)
-
-source: https://imgur.com/gallery/windows-pipes-screensaver-5KgEoYLx
