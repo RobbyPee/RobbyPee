@@ -33,7 +33,7 @@ Links
 * **Continental** – Created embedded ADAS features including trailer assist; filed multiple patents.
 * **Thales** – Developed threat detection algorithms for IR tracking systems.
 * **Legal & General** – Built cloud tools for actuaries using Python and Azure.
-* **Patent Attorney (Venner Shipley)** – Drafted and prosecuted electronics patents for global clients.
+* **Trainee Patent Attorney** – Drafted and prosecuted electronics patents for global clients.
 * **Fidessa / Edwards / OCCAM** – Various C++ infrastructure and modelling roles in finance and motor control.
 
 
@@ -49,12 +49,6 @@ Links
 * **US 10,964,059 B2** – *Static Camera Calibration from Vehicle Motion*
 * **US 10,832,428 B2** – *Range Estimation of Moving Object*
 * **US 12,227,042 B2** – *Calculating Vehicle Trailer Angle*
-
-## Philosophy
-
-I try to build tools that are local, open source and owned by the user. 
-
-This matters especially for schools, small businesses, or families who need reliable software without signing up to the expensive subscriptions. It also solves problems with data ownership, like GDPR.
 
 ## Projects (Ongoing)
 Solving real problems with local AI, modular tools, and a bit of plumbing.
