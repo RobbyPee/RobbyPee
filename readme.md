@@ -1,6 +1,6 @@
 # Robin Plowman
 
-**R&D Engineer – AI, Vision & Systems**
+**R&D Engineer – AI, Scientific, Engineering, Computer Vision & Systems**
 
 I design and build systems that work using mathematics, computer vision, and AI tools to turn complex problems into practical solutions.
 
