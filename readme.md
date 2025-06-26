@@ -15,6 +15,8 @@ Links
 - [Patent explainer](Tow_Hitch_Position_Estimation_SfM.md)
 
 - Just for fun, a [playable version of Computer Vision Pong I recreated from my MSc prototype](https://robbypee.github.io/HandPong/) - you'll need to enable camera, and possibly disable adblocker!
+  
+- Bosch Ebike Monitor - I just want to see the battery level as a percentage on my Garmin or smartwatch! - https://github.com/RobbyPee/Bosch-Smart-System-Ebike-Monitor
 
 ## Skills
 
