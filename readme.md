@@ -18,6 +18,8 @@ Links
   
 - Bosch Ebike Monitor - I just want to see the battery level as a percentage on my Garmin or smartwatch! - https://github.com/RobbyPee/Bosch-Smart-System-Ebike-Monitor
 
+- 3D printable inner tube / bag holder for water bottle mounts - https://www.thingiverse.com/thing:6763590
+
 ## Skills
 
 * **Languages**: C++ (11–20), Python, MATLAB, VBA, ARM Assembler
